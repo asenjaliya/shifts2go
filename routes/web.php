@@ -14,5 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.dashboard.index');
+});
+
+Route::get('/login', function () {
+    return view('admin.auth.login');
+});
+
+//Contractor
+
+Route::get('/contractor/index', function () {
+    return view('admin.contractor.index');
+});
+Route::get('/contractor/create', function () {
+    return view('admin.contractor.create');
+});
+Route::get('/contractor/edit', function () {
+    return view('admin.contractor.edit');
+});
+Route::get('/contractor/view', function () {
+    return view('admin.contractor.view');
 });
